@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wario (ワリオ)</title>
+  <style>
+    body {
+      font-family: arial, sans-serif;
+      padding: 0 15px;
+    }
+    .red {
+      color: red;
+    }
+    .green {
+      color: green;
+    }
+    pre {
+      background-color: #eee;
+      margin-bottom: 1em;
+      font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+      word-wrap: normal;
+      white-space: normal;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wario (ワリオ)</h1>
+  <button onclick="render1()">Render</button>
+  <pre>
+    <code>{ name: 'Lucian', food: 'biscuits' }</code>
+  </pre>
+  <pre>
+    <code>&lt;p&gt;Hello my name is {{name}}! I like eating {{food}}.&lt;/p&gt;</code>
+  </pre>
+
+  <div id="output"></div>
+  <pre>
+      var obj = {
+        foods: [
+          { foodName: 'Noodles', foodAttribute: 'stringy' },
+          { foodName: 'Tacos', foodAttribute: 'crunchy' },
+          { foodName: 'Ice cream sandwiches', foodAttribute: 'cold' }
+        ]
+      };
+  </pre>
+  <button onclick="render2()">Render</button>
+
+  <script type="text/wario" id="wario-template">
+      <p>I like eating the following foods:</p>
+      <ul>
+      {{#each foods}}
+      <li>{{foodName}} because they are {{foodAttribute}}.</li>
+      {{/each}}
+      </ul>
+  </script>
+
+  <div id="output2"></div>
+
+  <script src="wario.js"></script>
+  <script>
+    function render1() {
+      var obj = { name: 'Lucian', food: 'biscuits' };
+      var template = '<p>Hello my name is {{name}}! I like eating {{food}}.</p>';
+      document.getElementById('output')
+        .innerHTML = wario(template, obj);
+    }
+    function render2() {
+      var obj = {
+        foods: [
+          { foodName: 'Noodles', foodAttribute: 'stringy' },
+          { foodName: 'Tacos', foodAttribute: 'crunchy' },
+          { foodName: 'Ice cream sandwiches', foodAttribute: 'cold' }
+        ]
+      };
+      var template = document.getElementById('wario-template').innerText;
+      var text = wario(template, obj);
+      var output = document.getElementById('output2');
+      output.innerHTML = text;
+    }
+  </script>
+</body>
+</html>
