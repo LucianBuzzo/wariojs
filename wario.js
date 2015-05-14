@@ -11,7 +11,6 @@
     }
     return string;
   }
-
   function replaceValues(string, obj) {
     var matches = string.match(/{{([^}]*)}}/g);
     if(!matches) { return string; }
@@ -22,7 +21,6 @@
     }
     return string;
   }
-
   function parseTemplate(template, obj) {
     template = template.replace(/(\r\n|\n|\r)/gm,'').trim();
     if ( template.indexOf('{{#each') > -1 ) {
@@ -30,7 +28,5 @@
     }
     return replaceValues(template, obj);
   }
-
   window.wario = parseTemplate;
-
 }());
