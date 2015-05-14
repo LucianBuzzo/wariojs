@@ -1,6 +1,6 @@
 # README #
 
 Roadmap
-- add if conditionals?
-- improve performance
-- reduce size
+* add if conditionals?
+* improve performance
+* reduce size
