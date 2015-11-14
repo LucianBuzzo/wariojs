@@ -26,15 +26,19 @@
 </head>
 <body>
   <h1>Wario (ワリオ)</h1>
-  <button onclick="render1()">Render</button>
+
   <pre>
     <code>{ name: 'Lucian', food: 'biscuits' }</code>
   </pre>
+
   <pre>
     <code>&lt;p&gt;Hello my name is {{name}}! I like eating {{food}}.&lt;/p&gt;</code>
   </pre>
 
+  <button onclick="render1()">Render</button>
+
   <div id="output"></div>
+
   <pre>
       var obj = {
         foods: [
@@ -44,6 +48,7 @@
         ]
       };
   </pre>
+
   <button onclick="render2()">Render</button>
 
   <script type="text/wario" id="wario-template">
