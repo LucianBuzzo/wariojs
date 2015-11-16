@@ -40,13 +40,26 @@
   <div id="output"></div>
 
   <pre>
-      var obj = {
-        foods: [
-          { foodName: 'Noodles', foodAttribute: 'stringy' },
-          { foodName: 'Tacos', foodAttribute: 'crunchy' },
-          { foodName: 'Ice cream sandwiches', foodAttribute: 'cold' }
-        ]
-      };
+    <code>
+      var obj = {<br>
+      &nbsp;&nbsp;foods: [<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;{ foodName: 'Noodles', foodAttribute: 'stringy' },<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;{ foodName: 'Tacos', foodAttribute: 'crunchy' },<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;{ foodName: 'Ice cream sandwiches', foodAttribute: 'cold' }<br>
+      &nbsp;&nbsp;]<br>
+      };<br>
+    <code>
+  </pre>
+
+  <pre>
+    <code>
+      &lt;p&gt;I like eating the following foods:&lt;/p&gt;<br>
+      &lt;ul&gt;<br>
+      &nbsp;&nbsp;{{#each foods}}<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;{{foodName}} because they are {{foodAttribute}}.&lt;/li&gt;<br>
+      &nbsp;&nbsp;{{/each}}<br>
+      &lt;/ul&gt;
+    <code>
   </pre>
 
   <button onclick="render2()">Render</button>
