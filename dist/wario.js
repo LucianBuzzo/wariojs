@@ -78,8 +78,6 @@
     return replaceValues(source, obj);
   }
 
-  var wario = parseTemplate;
-
-  return wario;
+  return parseTemplate;
 });
 //# sourceMappingURL=wario.js.map
