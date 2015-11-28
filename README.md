@@ -1,7 +1,6 @@
 #Wario js
 Wario exposes the `wario()` function that accepts a string and an object and
-returns the compiled results. Variable in templates are indicated by two curly
-braces on either side (`{{` and `}}`).
+returns the compiled results. Variable in templates should be wrapped in `{{` and `}}`.
 
 ```
 var obj = { color: 'blue' }
