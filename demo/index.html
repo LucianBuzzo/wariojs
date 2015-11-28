@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wario (ワリオ)</title>
+  <title>Wario</title>
   <style>
     body {
       font-family: arial, sans-serif;
       padding: 0 15px;
+      max-width: 960px;
+      margin: 0 auto;
     }
     .red {
       color: red;
@@ -22,10 +24,47 @@
       white-space: normal;
       padding: 10px;
     }
+    .logo {
+      width: 100px;
+      height: auto;
+      float: right;
+    }
+    .cf:before,
+    .cf:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+    .cf:after {
+        clear: both;
+    }
+    .header h1 {
+      float: left;
+      margin: 0;
+      line-height: 100px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 36px;
+    }
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
   </style>
 </head>
 <body>
-  <h1>Wario (ワリオ)</h1>
+  <div class="header cf">
+    <h1>Wario</h1>
+    <img class="logo" src="wario.png">
+  </div>
+
+  <p>
+    Wario exposes the <code>wario()</code> function that accepts a string and an object and
+    returns the compiled results.<br>
+    Attributes in templates should be wrapped in <code>{{</code> and <code>}}</code>.
+  </p>
+
+  <h2>Basics</h2>
 
   <pre>
     <code>{ name: 'Lucian', food: 'biscuits' }</code>
@@ -39,6 +78,8 @@
 
   <div id="output"></div>
 
+  <h2>Arrays</h2>
+
   <pre>
     <code>
       var obj = {<br>
@@ -48,7 +89,7 @@
       &nbsp;&nbsp;&nbsp;&nbsp;{ foodName: 'Ice cream sandwiches', foodAttribute: 'cold' }<br>
       &nbsp;&nbsp;]<br>
       };<br>
-    <code>
+    </code>
   </pre>
 
   <pre>
@@ -59,7 +100,7 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;{{foodName}} because they are {{foodAttribute}}.&lt;/li&gt;<br>
       &nbsp;&nbsp;{{/each}}<br>
       &lt;/ul&gt;
-    <code>
+    </code>
   </pre>
 
   <button onclick="render2()">Render</button>
@@ -75,7 +116,7 @@
 
   <div id="output2"></div>
 
-  <script src="dist/wario.js"></script>
+  <script src="./../dist/wario.js"></script>
   <script>
     function render1() {
       var obj = { name: 'Lucian', food: 'biscuits' };
