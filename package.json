@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com//libraries.git"
+    "url": "https://github.com/LucianBuzzo/wariojs.git"
   },
-  "keywords": [],
-  "author": "undefined <undefined>",
+  "keywords": ["A compact, logicless templating library"],
+  "author": "Lucian Buzzo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com//libraries/issues"
+    "url": "https://github.com/LucianBuzzo/wariojs/issues"
   },
-  "homepage": "https://github.com//libraries",
+  "homepage": "https://github.com/LucianBuzzo/wariojs",
   "devDependencies": {
     "babel-core": "^5.2.17",
     "babel-eslint": "^4.0.5",
