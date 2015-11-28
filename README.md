@@ -1,9 +1,59 @@
-# libraries
+#Wario js
+Wario exposes the `wario()` function that accepts a string and an object and
+returns the compiled results. Variable in templates are indicated by two curly
+braces on either side (`{{` and `}}`).
 
+```
+var obj = { color: 'blue' }
+var template = 'The sky is {{color}}';
+var output = wario(template, obj);
+// → 'The sky is blue'
+```
 
+##Basics
+View  
+```
+{ name: 'Lucian', food: { snack: 'biscuits' } }
+```
 
-[![Travis build status](http://img.shields.io/travis//libraries.svg?style=flat)](https://travis-ci.org//libraries)
-[![Code Climate](https://codeclimate.com/github//libraries/badges/gpa.svg)](https://codeclimate.com/github//libraries)
-[![Test Coverage](https://codeclimate.com/github//libraries/badges/coverage.svg)](https://codeclimate.com/github//libraries)
-[![Dependency Status](https://david-dm.org//libraries.svg)](https://david-dm.org//libraries)
-[![devDependency Status](https://david-dm.org//libraries/dev-status.svg)](https://david-dm.org//libraries#info=devDependencies)
+Template  
+```
+<p>Hello my name is {{name}}! I like eating {{food.snack}}.</p>
+```
+
+Output  
+```
+<p>Hello my name is Lucian! I like eating biscuits.</p>
+```
+
+##Arrays
+View  
+```
+var obj = {
+  foods: [
+    { foodName: 'Noodles', foodAttribute: 'stringy' },
+    { foodName: 'Tacos', foodAttribute: 'crunchy' },
+    { foodName: 'Ice cream sandwiches', foodAttribute: 'cold' }
+  ]
+};
+```
+
+Template  
+```
+<p>I like eating the following foods:</p>
+<ul>
+{{#each foods}}
+  <li>{{foodName}} because they are {{foodAttribute}}.</li>
+{{/each}}
+</ul>
+```
+
+Output  
+```
+<p>I like eating the following foods:</p>
+<ul>
+  <li>Noodles because they are stringy.</li>
+  <li>Tacos because they are crunchy.</li>
+  <li>Ice cream sandwiches because they are cold.</li>
+</ul>
+```
