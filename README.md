@@ -1,6 +1,10 @@
 #Wario js
+A microscopic, moustache like templating library.
+
 Wario exposes the `wario()` function that accepts a string and an object and
 returns the compiled results. Attributes in templates should be wrapped in `{{` and `}}`.
+
+You can see a demo here http://lucianbuzzo.github.io/wariojs/demo/
 
 ```
 var obj = { color: 'blue' }
