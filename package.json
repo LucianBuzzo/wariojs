@@ -1,7 +1,7 @@
 {
-  "name": "libraries",
-  "version": "0.0.1",
-  "description": "",
+  "name": "wario",
+  "version": "1.0.0",
+  "description": "A compact, logicless templating library",
   "main": "dist/wario.js",
   "scripts": {
     "test": "gulp",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/LucianBuzzo/wariojs.git"
   },
-  "keywords": ["A compact, logicless templating library"],
+  "keywords": ["templates", "template", "micro", "lightweight"],
   "author": "Lucian Buzzo",
   "license": "MIT",
   "bugs": {
