@@ -13,6 +13,10 @@ var output = wario(template, obj);
 // → 'The sky is blue'
 ```
 
+# Usage
+
+Wario can be used with `require()` or included in your HTML in a `<script>` tag.
+
 ##Basics
 View  
 ```
