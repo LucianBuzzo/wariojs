@@ -1,3 +1,4 @@
+<img src="http://lucianbuzzo.github.io/wariojs/demo/wario.png" style="float: right" />
 #Wario js
 A microscopic, moustache like templating library.
 
