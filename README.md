@@ -1,6 +1,11 @@
-<img src="http://lucianbuzzo.github.io/wariojs/demo/wario.png" style="float: right" />
-#Wario js
+# Wario
+<p  align="center">
+  <img src="http://lucianbuzzo.github.io/wariojs/demo/wario.png" width="300" height="auto" />
+</p>
+
 A microscopic, moustache like templating library.
+
+---
 
 Wario exposes the `wario()` function that accepts a string and an object and
 returns the compiled results. Attributes in templates should be wrapped in `{{` and `}}`.
@@ -18,7 +23,7 @@ var output = wario(template, obj);
 
 Wario can be used with `require()` or included in your HTML in a `<script>` tag.
 
-##Basics
+## Basic
 View  
 ```
 { name: 'Lucian', food: { snack: 'biscuits' } }
@@ -34,7 +39,7 @@ Output
 <p>Hello my name is Lucian! I like eating biscuits.</p>
 ```
 
-##Arrays
+## Arrays
 View  
 ```
 var obj = {
